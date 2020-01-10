@@ -1,15 +1,12 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex from "vuex";
+import { IUserState } from './modules/user'
+import { ITabState } from './modules/tab'
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  },
-});
+export interface IRootState {
+  user: IUserState,
+  tab: ITabState
+}
+export default new Vuex.Store<IRootState>({});
